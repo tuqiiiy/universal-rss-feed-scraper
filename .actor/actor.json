@@ -1,47 +1,60 @@
-{
-  "actorSpecification": 1,
-  "name": "universal-rss-feed-scraper",
-  "title": "Universal RSS & Atom Feed Scraper",
-  "description": "Convert any RSS, Atom, or podcast feed into structured JSON/CSV. Extract titles, article links, publication dates, summaries, authors, and media attachments. Ideal for Make, Zapier, and AI summarizers.",
-  "version": "1.0",
-  "meta": {
-    "templateId": "project_empty"
-  },
-  "dockerfile": "./Dockerfile",
-  "categories": [
-    "DEVELOPER_TOOLS",
-    "NEWS"
-  ],
-  "storages": {
-    "dataset": {
-      "actorSpecification": 1,
-      "title": "RSS Feed Items Dataset",
-      "views": {
-        "overview": {
-          "title": "Overview",
-          "transformation": {
-            "fields": [
-              "feedTitle",
-              "title",
-              "link",
-              "pubDate",
-              "author",
-              "contentSnippet"
-            ]
-          },
-          "display": {
-            "component": "table",
-            "columns": {
-              "feedTitle": { "label": "Feed Source" },
-              "title": { "label": "Article Title" },
-              "link": { "label": "Link" },
-              "pubDate": { "label": "Published" },
-              "author": { "label": "Author" },
-              "contentSnippet": { "label": "Summary" }
-            }
-          }
-        }
-      }
-    }
-  }
+﻿{
+    "actorSpecification":  1,
+    "name":  "universal-rss-feed-scraper",
+    "title":  "Universal RSS \u0026 Atom Feed Scraper",
+    "description":  "Convert any RSS, Atom, or podcast feed into structured JSON/CSV. Extract titles, article links, publication dates, summaries, authors, and media attachments. Ideal for Make, Zapier, and AI summarizers.",
+    "version":  "1.0",
+    "meta":  {
+                 "templateId":  "project_empty"
+             },
+    "dockerfile":  "./Dockerfile",
+    "categories":  [
+                       "DEVELOPER_TOOLS",
+                       "NEWS"
+                   ],
+    "storages":  {
+                     "dataset":  {
+                                     "actorSpecification":  1,
+                                     "title":  "RSS Feed Items Dataset",
+                                     "views":  {
+                                                   "overview":  {
+                                                                    "title":  "Overview",
+                                                                    "transformation":  {
+                                                                                           "fields":  [
+                                                                                                          "feedTitle",
+                                                                                                          "title",
+                                                                                                          "link",
+                                                                                                          "pubDate",
+                                                                                                          "author",
+                                                                                                          "contentSnippet"
+                                                                                                      ]
+                                                                                       },
+                                                                    "display":  {
+                                                                                    "component":  "table",
+                                                                                    "columns":  {
+                                                                                                    "feedTitle":  {
+                                                                                                                      "label":  "Feed Source"
+                                                                                                                  },
+                                                                                                    "title":  {
+                                                                                                                  "label":  "Article Title"
+                                                                                                              },
+                                                                                                    "link":  {
+                                                                                                                 "label":  "Link"
+                                                                                                             },
+                                                                                                    "pubDate":  {
+                                                                                                                    "label":  "Published"
+                                                                                                                },
+                                                                                                    "author":  {
+                                                                                                                   "label":  "Author"
+                                                                                                               },
+                                                                                                    "contentSnippet":  {
+                                                                                                                           "label":  "Summary"
+                                                                                                                       }
+                                                                                                }
+                                                                                }
+                                                                }
+                                               }
+                                 }
+                 },
+    "output":  "./output_schema.json"
 }
