@@ -1,0 +1,32 @@
+{
+  "title": "Universal RSS Feed Scraper Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "feedUrls": {
+      "title": "Feed URLs",
+      "type": "array",
+      "description": "List of RSS or Atom feed URLs (e.g., blogs, podcasts, news, YouTube feeds).",
+      "editor": "globs",
+      "prefill": [
+        "https://news.ycombinator.com/rss",
+        "https://techcrunch.com/feed/"
+      ]
+    },
+    "maxItemsPerFeed": {
+      "title": "Max Items per Feed",
+      "type": "integer",
+      "description": "Maximum number of articles or episodes to extract per feed.",
+      "default": 30,
+      "minimum": 1,
+      "maximum": 200
+    },
+    "cleanHtml": {
+      "title": "Clean HTML in Snippets",
+      "type": "boolean",
+      "description": "Automatically strip HTML tags from content snippets for clean plain text.",
+      "default": true
+    }
+  },
+  "required": ["feedUrls"]
+}

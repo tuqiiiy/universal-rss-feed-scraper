@@ -1,0 +1,18 @@
+{
+  "name": "universal-rss-feed-scraper",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Universal RSS and Atom feed scraper. Extract articles, podcasts, blogs, author, links, dates, and enclosures into clean JSON/CSV.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "author": "tuqiiiy",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "apify": "^3.2.6",
+    "cheerio": "^1.0.0",
+    "crawlee": "^3.12.2",
+    "got-scraping": "^4.0.7"
+  }
+}
